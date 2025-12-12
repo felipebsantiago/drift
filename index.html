@@ -13,34 +13,33 @@
         </header>
 
         <!-- Área de Cadastro -->
-        <section id="cadastro-form-area" aria-labelledby="cadastro-titulo">
-            <h2 id="cadastro-titulo">Dados da Equipe</h2>
             
-            <form id="equipe-form">
+        <h2 id="cadastro-titulo">Dados da Equipe</h2>
+        <form id="equipe-form">
                 <input type="hidden" id="equipe-id" value="">
                 
                 <div class="form-group">
-                    <label for="nome">Nome da Equipe:</label>
-                    <input type="text" id="nome" required>
+                    <label for="name" class="form-label">NOME DA EQUIPE</label>
+                    <input type="email" class="form-control" id="nome">
+                  </div>
+
+                <div class="form-group">
+                    <label for="pais">PAÍS DE ORIGEM:</label>
+                    <input type="text" class="form-control" id="pais" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="pais">País de Origem:</label>
-                    <input type="text" id="pais" required>
+                    <label for="chefe">CHEFE DE EQUIPE:</label>
+                    <input type="text" class="form-control" id="chefe" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="chefe">Chefe da Equipe:</label>
-                    <input type="text" id="chefe" required>
+                    <label for="motor">MOTOR/FORNECEDOR:</label>
+                    <input type="text" class="form-control" id="motor" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="motor">Motor/Fornecedor:</label>
-                    <input type="text" id="motor" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="status">Status:</label>
+                    <label for="status">STATUS:</label>
                     <select id="status" required>
                         <option value="Ativa">Ativa</option>
                         <option value="Inativa">Inativa</option>
@@ -48,8 +47,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="titulos">Total de Títulos:</label>
-                    <input type="number" id="titulos" min="0" required>
+                    <label for="titulos">TOTAL DE TÍTULOS:</label>
+                    <input type="number" class="form-control"id="titulos" min="0" required>
                 </div>
 
                 <div class="form-actions">
@@ -61,12 +60,13 @@
         <!-- Área de Listagem -->
         <section id="separacao-area" aria-labelledby="listagem-titulo">
             <h2 id="listagem-titulo">Listagem de Equipes e Arquivos</h2>
-            
+            <br>
             <div class="file-controls">
                 <label for="arquivoInputEquipe">Importar arquivo CSV:</label>
                 <input type="file" id="arquivoInputEquipe" accept=".csv">
                 <button id="btn-exportar">Exportar Tabela</button>
             </div>
+
             <table id="equipes-table" role="grid">
                 <thead>
                     <tr>
